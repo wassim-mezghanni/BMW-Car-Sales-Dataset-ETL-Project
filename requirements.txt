@@ -1,0 +1,10 @@
+# Project dependencies
+pandas==2.2.3
+SQLAlchemy==2.0.43
+psycopg2-binary==2.9.10
+jupyter
+ipykernel
+# Visualization & scientific stack
+numpy  # (indirect via pandas but listed explicitly)
+matplotlib
+seaborn
