@@ -53,5 +53,22 @@ df_price.head(10).plot(kind="barh", x="Model", y="avg_price", legend=False, titl
 plt.savefig("data/processed/avg_price_by_model.png")
 plt.close()
 
+# Success rate by region
+query3 = """
+SELECT "Region", AVG(CASE WHEN "Sales_Volume" > 4500 THEN 1 ELSE 0 END) AS success_rate
+FROM bmw_car_sales
+GROUP BY "Region"
+ORDER BY success_rate DESC;
+"""
+df_success = pd.read_sql(query3, engine)
+print("\n Success Rate by Region:")
+print(df_success)
+
+# Plot
+df_success.plot(kind="bar", x="Region", y="success_rate", legend=False, title="Success Rate by Region")
+plt.savefig("data/processed/success_rate_by_region.png")
+plt.close()
+
+print("\n ETL + Analysis Completed! Results saved in /data/processed/")
 
 
