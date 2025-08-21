@@ -69,7 +69,7 @@ pgAdmin:
   - Port: 5432
   - User: admin / Password: admin / DB: bmw_sales
 
-## Environment Variables (Optional Overrides)
+## Environment Variable
 | Variable    | Default    | Purpose                  |
 |-------------|------------|--------------------------|
 | PGUSER      | admin      | DB user                  |
