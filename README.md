@@ -33,7 +33,7 @@ project1_csv_sql/
 
 ## Quick Start
 ```bash
-# 1. Clone (if not already)
+# 1. Clone
 # git clone <repo>
 cd project1_csv_sql
 
